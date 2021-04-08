@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="pl">	
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="javascript.js"></script>
+    </head>
+    <body onLoad="todos.construct();">
+        <div id="wrapper">
+        <form>
+        <input type="text" id="todo_input" name="todo_input" >
+        <input type="button" id="add_button" value="+" class="btn btn-primary">
+        <input type="button" id="undo_button" value="undo" class="btn btn-secondary">
+        </form>
+
+        <ol id="todo_list">
+        </ol>
+        </div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Warning</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure to remove task?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="todos.removeTodo();">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+    </body>
