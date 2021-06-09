@@ -3,13 +3,17 @@
 # dependencies
 lab5/node_modules
 lab5/.pnp
+lab6/node_modules
+lab6/.pnp
 .pnp.js
 
 # testing
 lab5/coverage
+lab6/coverage
 
 # production
 lab5/build
+lab6/build
 
 # misc
 .DS_Store
